@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&family=Roboto:wght@300&display=swap" rel="stylesheet">
+   
+    <title>FOOD ORDERING SITE</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+       
+        #navbar{
+            display: flex;
+             align-items: center;
+            position:relative;
+            top: 0px;
+
+        }
+        #navbar::before{
+            content:"";
+            background-color: black;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: .4;
+            top: 0px;
+            left: 0px;
+
+
+        }
+        #logo img{
+            width: 80px;
+            height: 80px;
+        }
+        #logo{
+          
+            margin: 20px 28px;
+
+        }
+        #navbar ul{
+            display: flex;
+            list-style: none;
+             align-items: center;
+           
+        }
+        #navbar ul li{
+            font-size: 1.3rem;
+           
+        }
+        #navbar ul li a{
+            color: aliceblue;
+            display: block;
+            margin: 3px 4px;
+            padding: 2px 22px;
+            text-decoration: none;
+            border-radius: 20px;
+font-family: 'Roboto', sans-serif;
+        }
+        #navbar ul li a:hover{
+            color: brown;
+            background-color: aqua;
+        }
+        #home{
+            display: flex;
+            flex-direction: column;
+            padding: 6px 200px;
+            justify-content: center;
+            align-items: center;
+            height: 505px;
+            font-family: 'Roboto', sans-serif;
+        }
+        #home::before{
+            content:"";
+            background: url(./BG.webp);
+            position: absolute;
+            height:640px;
+            width: 100%;
+            z-index: -1;
+            opacity: .7;
+            top: 0px;
+            left: 0px;
+        }
+        .h-primary{
+           
+            font: bold;
+            font-size: 3.8rem;
+            padding: 15px;
+           
+        }
+        
+        #home h1{
+            color: white;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+        }
+        #home p{
+            color: white;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+
+
+        }
+        .btn{
+            padding: 5px 12px;
+            border: 2px solid wheat;
+            background-color: brown;
+            margin: 15px ;
+            border-radius: 15px;
+            cursor: pointer;
+
+
+        }
+        .btn:hover{
+            background-color: aqua;
+        }
+        .center{
+            text-align: center;
+        }
+        .h-secondary{
+           
+          
+           font-size: 1.8rem;
+           padding: 15px;
+       }
+       #services{
+        display: flex;
+        margin: 8px;
+        justify-content: center;
+       }
+       #services .box{
+        border: 2px solid red;
+        height: 250px;
+        padding: 34px;
+        margin: 25px 6px;
+        border-radius: 20px;
+        background-color:  #bcafc4;
+       }
+       #services .box img{
+        height: 80px;
+        display: block;
+        margin: auto;
+        
+
+       }
+       
+       #services .box p{
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+
+
+       }
+       #client-section{
+        height: 300px;
+        position: relative;
+       }
+       #client-section::before{
+        content: "";
+        position: absolute;
+        background: url(./bg2.jpg);
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: .4;
+        
+
+       }
+
+
+       #clients{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+       }
+       #clients img{
+        height: 150px;
+
+       }
+       .client-item{
+        padding: 15px;
+       
+       }
+       #contact{
+        position: relative;
+
+       }
+       #contact::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        opacity: .7;
+        background: url(./contact\ us\ 2.webp);
+        background-repeat: no-repeat;
+        background-position: center;
+       }
+       #contact-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 34px;
+       }
+
+       #contact-box input,
+       #contact-box textarea{
+        width: 100%;
+        padding: 0.5rem;
+
+
+       }
+       .btn-send{
+        padding: 5px 12px;
+            border: 2px solid wheat;
+            background-color: brown;
+            margin:auto ;
+            border-radius: 15px;
+            cursor: pointer;
+            width: 100%;
+            display: block;
+
+
+       }
+       .btn-send:hover{
+            background-color: aqua;
+        }
+
+       #contact-box form{
+        width: 40%;
+       }
+       #contact-box label{
+        font-size: 1.2rem;
+       }
+      
+       
+       footer{
+        background-color: black;
+        color: white;
+        padding: 9px 20px;
+       }
+
+/* for making the site responsive */
+
+
+       @media only screen and (max-width: 1300px)
+       {
+        /* Navigation */
+#navbar{
+    flex-direction: column;
+}
+#navbar ul li a{
+    font-size: 1rem;
+    padding: opx 7px;
+}
+
+/* Home */
+section#home{
+    height: 310px;
+    padding: 3px 50px;
+
+}
+
+section#home::before{
+    height: 480px;
+    
+}
+section#home p{
+    font-size: 12px;
+   
+}
+
+
+
+/* Services section */
+#services{
+flex-direction: column;
+}
+
+#services .box{
+    height: 400px ;
+    width: 200px;
+   
+    margin: auto;
+
+}
+
+
+/* Client section/ */
+#clients{
+    flex-wrap: wrap;
+}
+#clients img{
+    padding: 2px 6px;
+    width: 66px;
+}
+#client-section{
+    height: 440px;
+}
+
+
+/* Contact us */
+
+/* footer */
+
+/* utility classes */
+.h-primary{
+    font-size: 26px;
+}
+
+
+       }
+
+
+       
+ 
+ 
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+   
+    <nav id="navbar">
+        <div id="logo">
+            <img src="./LOGO.webp" alt="online food ordering">
+        </div>
+        <ul>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">Service</a></li>
+            <li class="item"><a href="#">About us</a></li>
+            <li class="item"><a href="#">Contact us</a></li>
+          
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section id="home">
+        <h1 class="h-primary">
+            Welcome to India's No.1 Food Site
+        </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At vero quas ad enim illo repudiandae voluptas voluptates,</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <button class="btn">Order Right Now</button>
+    </section>
+    <hr>
+    
+
+
+    <section class="services-container">
+        <h1 class="h-primary center">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="./IMG/1.jpg" alt="">
+                <h2 class="h-secondary center">Food Ordering</h2>
+                <p class="center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat autem facere aut nesciunt ipsum minus cum. Consequuntur laudantium totam, assumenda in magnam porro.Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sequi non libero! Quas esse, cupiditate debitis ullam soluta quaerat voluptatem illum autem. </p>
+            </div>
+            <div class="box">
+                <img src="./IMG/2.webp" alt="">
+                <h2 class="h-secondary center">Veg food Ordering</h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, id in ratione vitae veritatis hic dolor quis saepe voluptate quibusdam voluptatum. Molestias, ratione.Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sequi non libero! Quas esse, cupiditate debitis ullam soluta quaerat voluptatem illum autem. </p>
+            </div>
+            <div class="box">
+                <img src="./IMG/3.jpg" alt="">
+                <h2 class="h-secondary center">Home delivery</h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, quo sint earum amet quidem, temporibus dolorem rem illo atque qui a cum veritatis!Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sequi non libero! Quas esse, cupiditate debitis ullam soluta quaerat voluptatem illum autem. </p>
+            </div>
+
+        </div>
+
+    </section>
+    
+    <section id="client-section">
+        <h1 class="h-primary center">Our clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="./IMG/t LOGO 1.webp" alt="">
+            </div>
+            <div class="client-item">
+                <img src="./IMG/paypal LOGO 3.webp" alt="">
+            </div>
+            <div class="client-item">
+                <img src="./IMG/f LOGO 2.webp" alt="">
+            </div>
+            <div class="client-item">
+                <img src="./IMG/bmw LOGO 4.webp" alt="">
+            </div>
+            
+        </div>
+    </section>
+    <section id="contact">
+        <h1 class="h-primary contact">
+            Contact Us
+        </h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Enter Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" name="name" id="name" placeholder="Enter Your Email">
+                </div>
+                <div class="form-group">
+                    <label for="phone number">Phone Number:</label>
+                    <input type="phone" name="name" id="name" placeholder="Enter Your Phone Number ">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                   <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                   <button class="btn-send"> send</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="center">
+        Copyright &copy; www.MyOnlinemeal.com. All right reserved!
+    </div>
+</footer>
+
+    
+</body>
+</html>
